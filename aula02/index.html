@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fundamentos da Web | Aula 2</title>
+</head>
+
+<body>
+    <h1>Fundamentos da Web</h1>
+    <h2>Marcações HTML</h2>
+    <h3 id="inicio">
+        Tabelas
+    </h3>
+    <ul>
+        <li>&lt;table&gt;&lt;/table&gt; - inicia a tabela</li>
+        <li>&lt;tr&gt; &lt;/tr&gt; - inicia a linha </li>
+        <li>&lt;th&gt;&lt;/th&gt; - célula de cabeçalho</li>
+        <li>&lt;td&gt;&lt;/td&gt; - célula de dados</li>
+        <li>&lt;caption&gt; &lt;/caption&gt; - legenda </li>
+    </ul>
+
+    <table border="1">
+        <tr>
+            <th>Matrícula</th>
+            <th>Nome</th>
+            <th>Cargo</th>
+        </tr>
+        <tr>
+            <td>10001</td>
+            <td colspan="2">Ana</td>
+            <td>Gerente</td>
+        </tr>
+        <tr>
+            <td>10002</td>
+            <td>Paulo</td>
+            <td colspan="2">Desenvolvedor</td>
+        </tr>
+        <tr>
+            <td>10003</td>
+            <td>Maria</td>
+            <td>Líder de equipe</td>
+            <td>Equipe 1</td>
+        </tr>
+        <tr>
+            <td>10004</td>
+            <td>João</td>
+            <td>Gerente de Banco de dados</td>
+            <td>Equipe 2</td>
+        </tr>
+    </table>
+
+    <br><br>
+    <table border="1">
+        <tr>
+            <th>Nome</th>
+            <th>Pai</th>
+            <th>Mãe</th>
+        </tr>
+        <tr>
+            <td>João</td>
+            <td rowspan="2">Pedro</td>
+            <td rowspan="2">Maria</td>
+        </tr>
+        <tr>
+            <td>José</td>
+        </tr>
+        <tr>
+            <td>Gabriela</td>
+            <td>Celso</td>
+            <td>Isis</td>
+        </tr>
+    </table>
+
+    <br><br>
+
+    <table border="1">
+        <caption>Alunos do CEFET/RJ Nova Friburgo</caption>
+        <thead>
+            <tr>
+                <th>Matrícula</th>
+                <th>Nome</th>
+                <th>Curso</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>202101</td>
+                <td>Ana</td>
+                <td>Sistemas de Informação</td>
+            </tr>
+            <tr>
+                <td>202102</td>
+                <td>Pedro</td>
+                <td>Turismo</td>
+            </tr>
+            <tr>
+                <td>202103</td>
+                <td>Francisco</td>
+                <td>Física</td>
+            </tr>
+            <tr>
+                <td>202104</td>
+                <td>Mariana</td>
+                <td>Engenharia Elétrica</td>
+            </tr>
+            <tr>
+                <td>202105</td>
+                <td>Joyce</td>
+                <td>Engenharia Elétrica</td>
+            </tr>
+        </tbody>
+        <tfoot>
+            <tr>
+                <th colspan="3">Cefet/RJ Campus Nova Friburgo</th>
+            </tr>
+        </tfoot>
+    </table>
+    <h3>Inserindo imagens na página - &lt;img &gt;</h3>
+    <figure>
+        <img src="./img/niteroi.png" alt="Visão panorâmica do Rio a partir de Niterói" loading="lazy">
+        <figcaption><span itemprop="city">Niterói</span></figcaption>
+    </figure>
+
+
+    <h3>Hipertextos e Links - &lt;a&gt;</h3>
+    <a href="./img/rio.png" download="cartao_postal.png" title="Clique para baixar o cartão postal">Clique aqui para baixar o cartão postal do Rio</a>
+    <p>
+        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Obcaecati eum quos sapiente quia. In beatae modi, explicabo commodi exercitationem, iure animi minus minima dignissimos, temporibus culpa neque velit molestiae maiores.
+    </p>
+
+    <!--
+    
+    <p>
+        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Obcaecati eum quos sapiente quia. In beatae modi, explicabo commodi exercitationem, iure animi minus minima dignissimos, temporibus culpa neque velit molestiae maiores.
+    </p>
+    <p>
+        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Obcaecati eum quos sapiente quia. In beatae modi, explicabo commodi exercitationem, iure animi minus minima dignissimos, temporibus culpa neque velit molestiae maiores.
+    </p>
+    <p>
+        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Obcaecati eum quos sapiente quia. In beatae modi, explicabo commodi exercitationem, iure animi minus minima dignissimos, temporibus culpa neque velit molestiae maiores.
+    </p>
+    <p>
+        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Obcaecati eum quos sapiente quia. In beatae modi, explicabo commodi exercitationem, iure animi minus minima dignissimos, temporibus culpa neque velit molestiae maiores.
+    </p>
+
+    
+    <p>
+        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Obcaecati eum quos sapiente quia. In beatae modi, explicabo commodi exercitationem, iure animi minus minima dignissimos, temporibus culpa neque velit molestiae maiores.
+    </p>
+    <p>
+        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Obcaecati eum quos sapiente quia. In beatae modi, explicabo commodi exercitationem, iure animi minus minima dignissimos, temporibus culpa neque velit molestiae maiores.
+    </p>
+    <p>
+        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Obcaecati eum quos sapiente quia. In beatae modi, explicabo commodi exercitationem, iure animi minus minima dignissimos, temporibus culpa neque velit molestiae maiores.
+    </p>
+    <p>
+        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Obcaecati eum quos sapiente quia. In beatae modi, explicabo commodi exercitationem, iure animi minus minima dignissimos, temporibus culpa neque velit molestiae maiores.
+    </p>
+
+    
+    <p>
+        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Obcaecati eum quos sapiente quia. In beatae modi, explicabo commodi exercitationem, iure animi minus minima dignissimos, temporibus culpa neque velit molestiae maiores.
+    </p>
+    <p>
+        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Obcaecati eum quos sapiente quia. In beatae modi, explicabo commodi exercitationem, iure animi minus minima dignissimos, temporibus culpa neque velit molestiae maiores.
+    </p>
+    <p>
+        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Obcaecati eum quos sapiente quia. In beatae modi, explicabo commodi exercitationem, iure animi minus minima dignissimos, temporibus culpa neque velit molestiae maiores.
+    </p>
+    <p>
+        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Obcaecati eum quos sapiente quia. In beatae modi, explicabo commodi exercitationem, iure animi minus minima dignissimos, temporibus culpa neque velit molestiae maiores.
+    </p>
+
+    
+    <p>
+        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Obcaecati eum quos sapiente quia. In beatae modi, explicabo commodi exercitationem, iure animi minus minima dignissimos, temporibus culpa neque velit molestiae maiores.
+    </p>
+    <p>
+        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Obcaecati eum quos sapiente quia. In beatae modi, explicabo commodi exercitationem, iure animi minus minima dignissimos, temporibus culpa neque velit molestiae maiores.
+    </p>
+    <p>
+        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Obcaecati eum quos sapiente quia. In beatae modi, explicabo commodi exercitationem, iure animi minus minima dignissimos, temporibus culpa neque velit molestiae maiores.
+    </p>
+
+    -->
+    <a href="#inicio">Voltar ao topo</a>
+
+    <h3>Marcações de formatação</h3>
+    <ul>
+        <li>&lt;b&gt; - negrito</li>
+        <li>&lt;strong&gt; - texto relevante</li>
+        <li>&lt;i&gt; - itálico (ícones)</li>
+        <li>&lt;em&gt; - texto enfatizado</li>
+        <li>&lt;mark&gt; - marcador de texto (grifado)</li>
+        <li>&lt;small&gt; - texto pequeno</li>
+        <li>&lt;del&gt; - texto apagado</li>
+        <li>&lt;ins&gt; - texto inserido</li>
+        <li>&lt;sub&gt; - subscrito</li>
+        <li>&lt;sup&gt; - sobrescrito</li>
+    </ul>
+
+    <h3>Citações</h3>
+    <ul>
+        <li>&lt;blockquote&gt; - citação longa</li>
+        <li>&lt;q&gt; - citação curtas (frases)</li>
+        <li>&lt;abbr&gt; - Abreviação - <abbr title="Centro Federal de Educação Tecnológica do Rio de Janeiro - Celso Suckow da Fonseca">CEFET/RJ</abbr></li>
+        <li></li>
+        <li></li>
+
+
+    </ul>
+
+    <h3>Contêineres e a diagramação de páginas</h3>
+    &lt;div&gt;
+    <div>
+        <h3>Área de conteúdo</h3>
+    </div>
+    <ul>
+        <li>&lt;div&gt; para gerar contêineres</li>
+        <li>&lt;header&gt; - div para cabeçalho</li>
+        <li>&lt;footer&gt; - div para rodapé</li>
+        <li>&lt;main&gt; - div para partes importantes</li>
+        <li>&lt;article&gt; - div para artigos</li>
+        <li>&lt;section&gt; - div para seções ou segmentos</li>
+        <li>&lt;aside&gt; - div para conteúdos secundários</li>
+        <li>&lt;nav&gt; - div para menu</li>
+    </ul>
+</body>
+
+</html>
