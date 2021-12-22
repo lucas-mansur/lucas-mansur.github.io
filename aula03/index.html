@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/estilo.css">
+    
+    <title>HTML e Introdução de CSS</title>
+    <!--
+    <style>
+        body {
+            background-color: red;
+        }
+    </style>
+    -->
+</head>
+<body>
+    <h1>Elementos Block e Inline</h1>
+    <small>
+        Propriedade Display
+    </small>
+
+    <h2>Elementos HTML block</h2>
+    <p>
+        Elementos block são elementos html que, por padrão, forçam a quebra de linha.
+        <strong>Não devem aparecer na estrutura de documentos HTML como elementos filhos de elementos <em>inline</em></strong>.
+    </p>
+    <h3>Exemplos de elementos block</h3>
+    <ul>
+        <li>Cabeçalhos: h1, h2, h3, h4, h5, h6</li>
+        <li>Parágrafo: p</li>
+        <li>br, hr</li>
+        <li>Lista: ul, ol, dl</li>
+        <li>Tabela: table</li>
+        <li>Div e divs semânticas: div, header, nav, footer, main, section, article, aside</li>
+    </ul>
+
+    <h2>Elementos HTML Inline </h2>
+    <p>Elementos inline são elementos html que se mantêm na mesma linha.</p>
+    <h3>Exemplos de elementos inline</h3>
+    <ul>
+        <li class="fundo-claro texto-azul">Marcações de texto: b, i, strong, em, mark, address, del, ins, sub, sup, span </li>
+        <li class="fundo-escuro">Marcações de citação: q, blockquote</li>
+        <li class="fundo-claro">marcação de inserção de imagem: img</li>
+        <li class="fundo-escuro">marcação de âncora: a</li>
+    </ul>
+
+
+    <h1>Introdução a CSS</h1>
+    <p><em>Cascading Style Sheet</em> (folhas de estilo em cascata) - Tecnologia utilizada para estilizar páginas. Em um projeto web, o HTML é responsável por estruturar os conteúdos e o CSS é responsável pela apresentação das páginas.</p>
+    <h2>Sintaxe</h2>
+    <code>
+        seletor { <br>
+            atributo1: valor1;<br>
+            atributo2: valor2;<br>
+            /* todos os atributos:valores separados por ponto e vírgula */<br>
+        }
+    </code>
+    
+    <h3>Seletores básicos</h3>
+    <ol>
+        <li>Seletor de elementos</li>
+        <li>Seletor de ID</li>
+        <li>Seletor de Classe</li>
+    </ol>
+    <h4>Seletor de Elemento</h4>
+    <p>
+        Os seletores de elemento alteram todos os elementos HTML da página. Para usá-los, basta usar o nome da tag html 
+    </p>
+    <h2>
+        Propriedades de Cores
+    </h2>
+    <h3>Cores de fundo - background</h3>
+    <div id="background-yellow">
+        <h3>Seletores de elementos HTML usam o nome da tag</h3>
+        div {<br>
+            background-color: yellow;<br>
+        }
+        <div id="teste-id">
+            <h3>Seletores de ID usam "#"</h3>
+            
+            #teste-id { <br>
+                background-image:url(../img/niteroi.png); <br>
+            }
+        </div>
+        <div class="box-blue">
+            <h3>Seletores de ID usam "."</h3>
+            .box-blue { <br>
+                background-color:#88f;<br>
+            }
+        </div>
+    </div>
+
+    <h2>Display inline-block</h2>
+    <p>Permite que elementos se posicionem ao lado do outro. Diferente de um elemento <b>inline</b> comum, o <b>inline-block</b> <mark>permite configurar a altura e largura do elemento</mark>.</p>
+    <h3>Exemplo:</h3>
+    <div class="box">
+        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Vitae aperiam quaerat soluta ad deserunt laborum sint provident, illum dolorem doloribus enim tempore, repellendus odio, dolor facere fugiat consequuntur incidunt eos.</p>
+        <section>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Vitae aperiam quaerat soluta ad deserunt laborum sint provident, illum dolorem doloribus enim tempore, repellendus odio, dolor facere fugiat consequuntur incidunt eos.</p>
+        </section>
+    </div>
+    <div class="box">
+        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Vitae aperiam quaerat soluta ad deserunt laborum sint provident, illum dolorem doloribus enim tempore, repellendus odio, dolor facere fugiat consequuntur incidunt eos.</p>
+        <section>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Vitae aperiam quaerat soluta ad deserunt laborum sint provident, illum dolorem doloribus enim tempore, repellendus odio, dolor facere fugiat consequuntur incidunt eos.</p>
+        </section>
+    </div>
+    
+    <h3>Estados de um link</h3>
+    <p>
+        <a href="#">Link 1</a> <br>
+        <a href="#">Link 2</a> <br>
+        <a href="#">Link 3</a> <br>
+        <a href="#">Link 4</a> <br>
+    </p>
+    
+</body>
+</html>

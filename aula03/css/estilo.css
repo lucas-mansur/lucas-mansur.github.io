@@ -1,0 +1,77 @@
+body {
+    background:rgb(150, 255, 255) ;
+    font-family: "Times New Roman", Tahoma, Verdana, serif;
+    
+}
+
+#background-yellow {
+    width:400px;
+    height:400px;
+    background-color:yellow;
+}
+.box-blue {
+    background-color:#88f;
+}
+#teste-id { 
+    color: #fff;
+    background-image:url(../img/niteroi.png);
+    background-size: 100%;
+    width:250px;
+    height:100px;
+    margin-top:10px;
+}
+mark {
+    background-color: rgba(20,255, 0, 0.5);
+}
+
+a {
+    color:chocolate;
+}
+
+a:hover {
+    color:gold;
+}
+
+a:visited {
+    color: purple;
+}
+
+a:active {
+    color:rgba(20,255, 0);
+}
+
+#para-block {
+    font-size: 2em;
+    font-weight:bold;
+}
+
+.fundo-claro {
+    background-color:#fff;
+}
+
+.fundo-escuro {
+    background-color: #aaa;
+}
+
+.texto-azul {
+    font-size: 2em;
+    color:blue;
+}
+
+div > p {
+    text-align:justify;
+    font-size: 1em;
+}
+
+.box {
+    border: 1px solid #000;
+    display:inline-block;
+    box-sizing: border-box; 
+    /* obriga o navegador a calcular o 
+        width em função de border-left + padding-left + largura do conteudo +
+         padding-right + border-right*/
+    width:500px;
+    
+    padding: 20px 5px 50px 30px;
+    margin:50px 10px 100px 5px;
+}
