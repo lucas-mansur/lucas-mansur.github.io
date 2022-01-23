@@ -74,6 +74,7 @@ Main começa aqui
     display: flex;
     flex-direction: row;
     padding: 80px 50px 100px;
+    flex-wrap: wrap;
 
 }
 
@@ -112,7 +113,6 @@ Main começa aqui
 
 .staff{
     background-color: var(--blue);
-    flex-wrap: wrap;
     justify-content: space-between;
 }
 
@@ -148,4 +148,17 @@ Main começa aqui
 .staff p {
     color:#ddd;
 
+}
+
+.products {
+    justify-content: center;
+}
+
+.products h2, .products > p {
+    width: 100%;
+    text-align: center;
+}
+
+.products div > p {
+width: 350px;
 }
