@@ -1,0 +1,16 @@
+/* button.css */
+
+.btn {
+    display: block;
+    color: black;
+    border-color: transparent;
+    &:disable,
+    &.disable {
+        pointer-events: none;
+    }
+}
+
+.btn--primary {
+    background: blue;
+    color: white;
+}
