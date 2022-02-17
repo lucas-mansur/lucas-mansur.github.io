@@ -4,14 +4,12 @@ var a = 1;
 
 console.log(a);
 console.log("Valor da variável a = " + a);
-console.log("Tipo da variável a = "
-    typeof a);
+console.log("Tipo da variável a = " + typeof a);
 
 var a = "Marina";
 /* a varivel passa de 1 para marina de number para string"*/
 console.log("Valor da variável a = " + a);
-console.log("Tipo da variável a = "
-    typeof a);
+console.log("Tipo da variável a = " + typeof a);
 
 function teste() {
     //Escopo léxico - váriaveis que só existem dentro de funções
@@ -19,9 +17,9 @@ function teste() {
     return b;
 }
 
-console.log("Valor da chamanda da função teste = " + teste());
+console.log("Valor da chamada da função teste = " + teste());
 
-console.log("Valor da chamanda da função teste = " + b);
+/console.log("Valor da chamada da função teste = " + b);/
 //Escopo léxico - váriaveis que só existem dentro de funções. vide acima
 // Porém se for necessário ter um várivel que exista apenas denrto do bloco exemplo if else usar a palavra reservada let
 
@@ -64,3 +62,9 @@ let num3 = 1,
 console.log(num3 == num4); // valida se o valor é o mesmo
 console.log(num3 === num4); // valida se o valor e o tipo é msm. tbm é valido para !==
 // atribuição e operação igual a C++
+
+let nome = 'Paulo';
+let carro = "Fusca";
+
+console.log("Nome do proprietário: " + nome + "\nVeículo: " + carro);
+console.log(`Nome do proprietário: ${nome} \nVeículo: ${carro}`)
