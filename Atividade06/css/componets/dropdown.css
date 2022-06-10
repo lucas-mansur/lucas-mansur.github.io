@@ -1,0 +1,20 @@
+/* dropdown.css */
+
+.dropdown {
+    cursor: pointer;
+    position: relative;
+    display: inline-block;
+    outline: none;
+}
+
+.dropdown .menu {
+    cursor: auto;
+    position: absolute;
+    display: none;
+    outline: none;
+    top: 100%;
+    min-width: -webkit-max-content;
+    min-width: -moz-max-content;
+    min-width: max-content;
+    margin: 0em;
+}
