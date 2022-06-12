@@ -1,0 +1,35 @@
+h2 {
+  color: #dd0000;
+}
+
+#fundo_celuca_1 {
+  background-color: #ffcc66;
+  text-align: center;
+  color: #dd0000;
+  font-weight: bold;
+}
+
+#fundo_celuca_2 {
+  background-color: #ffcc66;
+  text-align: center;
+  color: #dd0000;
+}
+body {
+  background-color: #dddddd;
+}
+div {
+  display: flex;
+  flex-direction: row;
+  width: 300px;
+}
+img {
+    position: relative;
+ width: 70%;
+ height: 70%;
+ right: -40px;
+ top: 15px;
+  }
+
+  h2{
+      margin-top: 15px;
+  }
