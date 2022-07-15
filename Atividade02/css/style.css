@@ -1,0 +1,35 @@
+.content{
+    line-height: 8%;
+}
+
+h2{
+    color: rgb(252, 106, 53);
+}
+
+h4{
+    color: rgb(159, 187, 35);
+}
+
+div{
+    width: 400px;
+    word-wrap: break-word;
+}
+
+div.p1{
+    line-height: 1.6;
+}
+
+div.p2{
+    line-height: 1.6;
+}
+
+div.p3{
+    line-height: 1.6;
+}
+
+div.p4{
+    line-height: 1.6;
+}
+
+
+
