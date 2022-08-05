@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+    <head>
+        <meta charset="UTF-8">
+        <style>
+            html,body{
+                width: 100%;
+                height: 100%;
+                font-family: Inter, sans-serif;
+                background-color: white;
+            }
+
+          
+        </style>
+    </head>
+    <body>
+        
+        <div class="container">
+                        
+            <div class="card text-center">
+                <div class="card-header text-center">
+                   <strong> 1.</strong> Funções Numéricas
+                </div>
+                <div class="card-body">
+                    <div class="row">
+                        <div class="col">
+                            <button class="btn btn-primary" id="btn-sum">Somar Array</button>
+                        </div>
+                    </div>
+                    <hr>
+                    <div class="row">
+                        <div class="col">
+                            <button class="btn btn-primary" id="btn-sumodds">Somar Ímpares do Array</button>
+                        </div>
+                    </div>
+                    <hr>
+                    <div class="row">
+                        <div class="col">
+                            <button class="btn btn-primary" id="btn-product">Produto do Array</button>
+                        </div>
+                    </div>
+                    
+                    
+                </div>
+                <div class="card-footer"><small>*verificar o console para as respostas</small></div>
+            </div>
+            <br>
+            <div class="card text-center">
+                <div class="card-header">
+                    <strong>2.</strong> Números Primos
+                </div>
+                <div class="card-body">
+                    <div class="row">
+                        <div class="col">
+                            <button class="btn btn-primary" id="btn-primos">Números Primos</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="card-footer"><small>*verificar o console para as respostas</small></div>
+            </div>
+            <br>
+            <div class="card text-center">
+                <div class="card-header">
+                    <strong>3.</strong> Números Romanos
+                </div>
+                <div class="card-body">
+                    <div class="row">
+                        <div class="col">
+                            <div class="row">
+                                <div class="col">
+                                    <input type="number" id='input-romano' placeholder="Número a ser transformado" class="form-control">
+                                </div>
+                                <div class="col">
+                                   <input type="text" id='romano-resp' disabled class="form-control">
+                                </div>
+                            </div>
+                            <br>
+                            <button class="btn btn-primary" id="btn-romanos">Transformar em Romano</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="card-footer"><small></small></div>
+            </div>
+            <br>
+            <div class="card text-center">
+                <div class="card-header">
+                    <strong>4.</strong> Saque Mínimo
+                </div>
+                <div class="card-body">
+                    <div class="row">
+                        <div class="col">
+                            <div class="row">
+                                <div class="col">
+                                    <input type="number" id='input-saque' placeholder="Valor para saque" class="form-control">
+                                    <hr>
+                                   <table class="table table-striped">
+                                        <thead>
+                                            <tr>
+                                            <th scope="col">Nota</th>
+                                            <th scope="col">Quantidade</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <th scope="row">R$ 2,00</th>
+                                                <td><span id='notas-2'></span></td>
+                                            </tr>
+                                            <tr>
+                                                <th scope="row">R$ 5,00</th>
+                                                <td><span id='notas-5'></span></td>
+                                            </tr>
+                                            <tr>
+                                                <th scope="row">R$ 10,00</th>
+                                                <td><span id='notas-10'></span></td>
+                                            </tr>
+                                            <tr>
+                                                <th scope="row">R$ 20,00</th>
+                                                <td><span id='notas-20'></span></td>
+                                            </tr>
+                                            <tr>
+                                                <th scope="row">R$ 50,00</th>
+                                                <td><span id='notas-50'></span></td>
+                                            </tr>
+                                            <tr>
+                                                <th scope="row">R$ 100,00</th>
+                                                <td><span id='notas-100'></span></td>
+                                            </tr>
+                                        </tbody>
+                                   </table>
+                                </div>
+                            </div>
+                            <br>
+                            <button class="btn btn-primary" id="btn-saque">Sacar</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="card-footer"><small></small></div>
+            </div>
+        </div>
+        <script>
+            
+            const array3 = [1,2,3,4,5,6]
+            const array2 = [2,2,2]
+            const array1 = [1,2,3]
+
+            // botoes
+                     //sum
+            document.querySelector('#btn-sum').addEventListener('click', e=>{
+                Sum(array1)
+                Sum(array2)
+                Sum(array3)
+            })
+                    //sumodds
+            document.querySelector('#btn-sumodds').addEventListener('click', e=>{
+                SumOdds(array1)
+                SumOdds(array2)
+                SumOdds(array3)
+            })
+                    //product
+            document.querySelector('#btn-product').addEventListener('click', e=>{
+                Product(array1)
+                Product(array2)
+                Product(array3)
+            })
+                    //primos
+            document.querySelector('#btn-primos').addEventListener('click', e=>{
+                Primos(2, 100) // passar os argumentos aqui.
+                Primos(4) // passar os argumentos aqui.
+            })
+                    //romanos
+            document.querySelector('#btn-romanos').addEventListener('click', e=>{
+                console.log(TransformarEmRomano(document.querySelector('#input-romano').value))
+            })
+                    //dinheiro
+            document.querySelector('#btn-saque').addEventListener('click', e=>{
+                console.log(Saque(document.querySelector('#input-saque').value))
+            })
+
+            
+
+            // 1. FUNÇÕES NUMÉRICAS -------------------------------------------
+            function Sum(array){
+                var somatorio = 0
+                
+                for(var i = 0; i < array.length; i++){
+                   somatorio += parseFloat(array[i])
+                }
+                console.log("O somatório do array é: "+ somatorio)
+                return somatorio;
+            }
+
+
+            function SumOdds(array){
+                var somatorio = 0
+                
+                for(var i = 0; i < array.length; i++){
+                   if(array[i] % 2 != 0){
+                    somatorio += parseFloat(array[i])
+                   }
+                }
+                console.log("O somatório dos ímpares do array é: "+ somatorio)
+                return somatorio;
+            }
+            
+            function Product(array){
+                var produto = 1
+                
+                for(var i = 0; i < array.length; i++){
+                   produto = produto * parseFloat(array[i])
+                }
+
+                console.log("O produto do array é: "+ produto)
+
+                return produto;
+            }
+
+            // 2. NÚMEROS PRIMOS ------------------------------------------------------------------------------
+            function PrimosNoIntervalo(a,b){
+                var primos = []
+                var primo;
+
+                for(var i = a; i <= b; i++){
+
+                    primo = true
+
+                    for(var k = 2; k < i; k++){
+                        
+                        if(i % k == 0){
+                            primo = false; 
+                            break 
+                        }
+
+                    }
+                    
+                    if(primo){primos.push(i)} 
+
+
+
+                }
+                return primos
+            }
+
+            function PrimosPorQuantidade(a){
+                var primos = []
+                var primo;
+
+                for(var i = 2; primos.length < a; i++){
+
+                    primo = true
+
+                    for(var k = 2; k < i; k++){
+                        
+                        if(i % k == 0){
+                            primo = false; 
+                            break 
+                        }
+
+                    }
+                    
+                    if(primo){primos.push(i)} 
+
+
+
+                }
+                return primos
+            }
+
+            function Primos(){
+                if(arguments.length == 0 || arguments.length > 2){
+                    console.log('ERRO: Você passou parametros de forma incorreta')
+                }else if(arguments.length == 1){
+
+                    console.log('Mostrando '+ arguments[0] +' números primos.')
+                    console.log(PrimosPorQuantidade(arguments[0]))
+
+                }else if(arguments.length == 2){
+
+                    console.log('Mostrando números primos entre '+ arguments[0] +' e '+ arguments[1] +'.')
+                    console.log(PrimosNoIntervalo(arguments[0], arguments[1]))
+                }
+            }
+            // 3. ROMANOS-------------------------------------------------------------------------
+            function TransformarEmRomano(num) {
+                var romanos = {M:1000,CM:900,D:500,CD:400,C:100,XC:90,L:50,XL:40,X:10,IX:9,V:5,IV:4,I:1}
+                var romano = ''
+                for ( var i in romanos ) {
+                    while ( num >= romanos[i] ) {
+                    romano += i;
+                    num -= romanos[i];
+                    }
+                }
+                document.querySelector('#romano-resp').value = romano
+                return romano;           
+            }
+            // 4. SAQUE ---------------------------------------------
+            function Saque(valor){
+                var n100, n50, n20, n10, n5, n2; // inteiros
+                var r100, r50, r20, r10, r5, r2; // restos
+ 
+                n100 = Math.trunc(valor / 100)
+                r100 = valor % 100
+
+                n50 = Math.trunc(r100 / 50)
+                r50 = r100 % 50
+
+                n20 = Math.trunc(r50 / 20)
+                r20 = r50 % 20
+
+                n10 = Math.trunc(r20 / 10)
+                r10 = r20 % 10
+
+                n5 = Math.trunc(r10 / 5)
+                r5 = r10 % 5
+
+                n2 = Math.trunc(r5 / 2)
+                r2 = r5 % 2
+
+            
+                document.querySelector('#notas-2').innerHTML = n2
+                document.querySelector('#notas-5').innerHTML = n5
+                document.querySelector('#notas-10').innerHTML = n10
+                document.querySelector('#notas-20').innerHTML = n20
+                document.querySelector('#notas-50').innerHTML = n50
+                document.querySelector('#notas-100').innerHTML = n100
+
+
+
+            }
+
+        </script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
+    </body>
+</html>
